@@ -7,6 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <p>你好！！！</p>
+    <canvas id="myCanvas" width="350" height="180" style="border: 2px solid #ffff00;"></canvas>
+    <script>
+        var c=document.getElementById("myCanvas");
+        var ctx=c.getContext("2d");
+        
+        var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+        
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+        
+        ctx.fillStyle=grd;
+        ctx.fillRect(10,10,150,80);
+        
+        </script>
 </body>
 </html>
